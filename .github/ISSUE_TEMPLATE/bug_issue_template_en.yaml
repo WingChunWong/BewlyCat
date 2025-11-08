@@ -1,0 +1,78 @@
+name: Bug Report
+description: Report errors encountered here.
+labels: [BUG]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Issues with empty titles or overly simplistic titles like "bug", "error", or "problem" will be closed and locked without explanation. Issues related to old versions or already reported problems will be closed.
+
+        Feature requests are not for bug reports. Please [open a blank issue](https://github.com/keleus/BewlyCat/issues/new) for them.
+
+        If you encounter page-related issues (e.g., unexpected elements on a page), we recommend including the URL of the page where the problem occurred.
+
+  - type: textarea
+    attributes:
+      label: Environment Information
+      description: "[Please do not modify the issue template.] Extension version, browser version, and any custom settings you have applied."
+      placeholder: |
+        - Browser (e.g., Google Chrome):
+        - Browser Version (e.g., 126.0.6478.126):
+        - BewlyCat Version (e.g., 1.0.3):
+
+        If you modified BewlyCat's settings, please describe them below to help us troubleshoot (e.g., "The problem appeared after setting ××"):
+
+      value: |
+        - Browser (e.g., Google Chrome):
+        - Browser Version (e.g., 126.0.6478.126):
+        - BewlyCat Version (e.g., 0.20.1):
+
+        If you modified BewlyCat's settings, please describe them below to help us troubleshoot (e.g., "The problem appeared after setting ××"):
+
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: Installation Source
+      options:
+        - Extension Store
+        - Github
+        - Self-compiled
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Problem Description
+      description: "How to reproduce the issue. It's best to include screenshots or videos to facilitate troubleshooting."
+      placeholder: |
+        Please check if this issue has already been reported in other issues first.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Expected Behavior
+      description: "What you think the expected behavior should be."
+    validations:
+      required: false
+
+  - type: checkboxes
+    attributes:
+      label: Final Confirmation
+      description: "Please confirm all of the following, especially the first point, before submitting. Ensure the issue is not caused by Bilibili, the browser, or other extensions."
+      options:
+        - label: "I confirm that the problem does not occur after disabling BewlyCat and performing a hard refresh (hold Shift and click refresh)."
+          required: false
+        - label: "I confirm that this issue has not been reported in other issues."
+          required: false
+        - label: "I confirm that I am using the latest version of BewlyCat."
+          required: false
+
+  - type: checkboxes
+    attributes:
+      label: Contribution
+      options:
+        - label: "I will create a Pull Request (PR) to fix this issue myself."
+          required: false
