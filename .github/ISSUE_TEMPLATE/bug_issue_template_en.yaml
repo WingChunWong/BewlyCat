@@ -1,6 +1,8 @@
 name: Bug Report
 description: Report errors encountered here.
+title: '[Bug Report]'
 labels: [BUG]
+
 body:
   - type: markdown
     attributes:
