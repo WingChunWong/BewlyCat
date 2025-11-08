@@ -1,0 +1,43 @@
+name: Feature Request
+description: Submit a new feature request
+title: '[Feature Request] '
+labels: [功能请求]
+body:
+  - type: dropdown
+    id: module
+    attributes:
+      label: Related Module
+      description: Please select the module related to this feature request
+      options:
+        - Extension Page
+        - Bilibili Page
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: page_url
+    attributes:
+      label: Page URL
+      description: If it involves a specific page, please provide the page URL
+      placeholder: 'e.g.: https://t.bilibili.com/'
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Feature Description
+      description: Please describe in detail the feature you wish to add
+      placeholder: Describe your feature requirements, including expected behavior, usage scenarios, etc.
+    validations:
+      required: true
+
+  - type: textarea
+    id: existing_plugins
+    attributes:
+      label: If other extensions already have this feature:
+      description: If you know that other extensions/user scripts already implement similar features, please provide reference information
+      placeholder: e.g.: Extension name or script name and description
+    validations:
+      required: false
