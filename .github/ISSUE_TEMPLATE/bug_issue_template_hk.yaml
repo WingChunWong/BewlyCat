@@ -1,0 +1,78 @@
+name: 問題報告
+description: 遇到錯誤請喺呢度報告。
+labels: [BUG]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        標題唔填或者直接求其寫類似「bug」「錯誤」「有問題」簡單帶過嘅 issue 會直接 close + lock 唔解釋，如果係舊版本嘅問題或者已經有人問過嘅問題將會關閉。
+
+        功能請求唔係喺問題報告裡面寫嘅，請[開個功能請求 issue](https://github.com/keleus/BewlyCat/issues/new?template=feature_request_template.yaml)。
+
+        如果遇到頁面相關問題（比如某頁面出現咗唔應該出現嘅元素），我哋建議一併附上發生問題嘅頁面連結。
+
+  - type: textarea
+    attributes:
+      label: 環境資訊
+      description: "【請勿修改 issue 模版。】擴展版本、瀏覽器版本、以及你改過嘅自訂設定。"
+      placeholder: |
+        - 瀏覽器（例如 Google Chrome）：
+        - 瀏覽器版本（例如 126.0.6478.126）：
+        - BewlyCat 版本（例如 1.0.3）：
+
+        如果你改過 BewlyCat 嘅設定，請寫喺下面方便我哋排查問題（可以大概寫成類似「設定咗××之後出現呢個問題」〔將「××」換成你嘅設定項〕）：
+
+      value: |
+        - 瀏覽器（例如 Google Chrome）：
+        - 瀏覽器版本（例如 126.0.6478.126）：
+        - BewlyCat 版本（例如 0.20.1）：
+
+        如果你改過 BewlyCat 嘅設定，請寫喺下面方便我哋排查問題（可以大概寫成類似「設定咗××之後出現呢個問題」〔將「××」換成你嘅設定項〕）：
+
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: 安裝來源
+      options:
+        - 插件商店
+        - Github
+        - 自己編譯
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: 問題描述
+      description: "點樣可以重現呢個問題，最好有截圖或者影片方便排查。"
+      placeholder: |
+        請先搜尋下呢個問題有冇喺其他 issue 度出現過
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: 預期行為
+      description: "你覺得應該係點樣嘅行為。"
+    validations:
+      required: false
+
+  - type: checkboxes
+    attributes:
+      label: 最終確認
+      description: "請確認晒以下所有內容，尤其係第一點，排除咗B站、瀏覽器同其他插件嘅問題之後，再提交。"
+      options:
+        - label: "我確認停用咗 BewlyCat 同強制重新整理（撳住 Shift 再撳重新整理掣）之後，問題冇再出現。"
+          required: false
+        - label: "我確認呢個問題未喺其他 issue 度出現過。"
+          required: false
+        - label: "我確認我正用緊最新版本嘅 BewlyCat。"
+          required: false
+
+  - type: checkboxes
+    attributes:
+      label: 參與貢獻
+      options:
+        - label: "我會自己開個PR去修復呢個問題"
+          required: false
